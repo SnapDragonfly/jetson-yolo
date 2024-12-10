@@ -1,6 +1,6 @@
 # jetson-yolo
 
-jetson-yolo DeepStream
+jetson-yolo based on NVIDIA DeepStream 6.3
 
 # Prerequisites
 
@@ -21,8 +21,6 @@ $ sudo apt-get install libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev \
 ```
 
 # Compile
-
-**DeepStream 6.3**
 
 - For Jetson, CUDA_VER=11.4
 - For x86, CUDA_VER=12.1

@@ -617,7 +617,7 @@ main (int argc, char *argv[])
   GError *error = NULL;
   guint i;
 
-  ctx = g_option_context_new ("Nvidia DeepStream Demo");
+  ctx = g_option_context_new ("Nvidia DeepStream");
   group = g_option_group_new ("abc", NULL, NULL, NULL, NULL);
   g_option_group_add_entries (group, entries);
 
@@ -632,14 +632,14 @@ main (int argc, char *argv[])
   }
 
   if (print_version) {
-    g_print ("deepstream-app version %d.%d.%d\n",
+    g_print ("jetson-yolo version %d.%d.%d\n",
         NVDS_APP_VERSION_MAJOR, NVDS_APP_VERSION_MINOR, NVDS_APP_VERSION_MICRO);
     nvds_version_print ();
     return 0;
   }
 
   if (print_dependencies_version) {
-    g_print ("deepstream-app version %d.%d.%d\n",
+    g_print ("jetson-yolo version %d.%d.%d\n",
         NVDS_APP_VERSION_MAJOR, NVDS_APP_VERSION_MINOR, NVDS_APP_VERSION_MICRO);
     nvds_version_print ();
     nvds_dependencies_version_print ();
