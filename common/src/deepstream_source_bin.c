@@ -1310,6 +1310,10 @@ create_uridecode_src_bin (NvDsSourceConfig * config, NvDsSrcBin * bin)
   if (g_strrstr (config->uri, "rtsp://") == config->uri) {
     configure_source_for_ntp_sync (bin->src_elem);
   }
+  if (g_strrstr (config->uri, "rtp://") == config->uri) {
+    config->live_source = TRUE;
+  }
+  g_print ("create_uridecode_src_bin -> %s \n", config->uri);
 
   g_object_set (G_OBJECT (bin->src_elem), "uri", config->uri, NULL);
   g_signal_connect (G_OBJECT (bin->src_elem), "pad-added",
