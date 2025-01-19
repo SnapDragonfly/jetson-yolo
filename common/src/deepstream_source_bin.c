@@ -396,6 +396,8 @@ decodebin_child_added (GstChildProxy * child_proxy, GObject * object,
 {
   NvDsSrcBin *bin = (NvDsSrcBin *) user_data;
   NvDsSourceConfig *config = bin->config;
+  g_print ("decodebin_child_added element: %s\n", name);
+
   if (g_strrstr (name, "decodebin") == name) {
     g_signal_connect (G_OBJECT (object), "child-added",
         G_CALLBACK (decodebin_child_added), user_data);
